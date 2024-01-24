@@ -22,7 +22,9 @@ using namespace std;
 	string nombre ="";
 
 	double sueldo = 0;
-
+	
+	
+	
 int main(){
 	
 // Definimos las variables
@@ -82,7 +84,7 @@ int main(){
 				
 			//pago fijo por excedente
 				
-				sueldo = 8500 *0.020;
+				sueldo = 8500 * 0.020;
 		
 		}
 		else{
@@ -118,7 +120,7 @@ int main(){
 							
 	cout<<"\n\t\t\t    Sueldo del empleado: ";
 	cin>>sueldo;
-								
+					
 	}
 						
 // funcion que recopila los datos optenidos enlas operaciones
@@ -127,11 +129,33 @@ int main(){
 
 		double neto = 0;
 		neto = sueldo - imss -rap - isr;
-
-		cout<<"\n\t\t\tRetencion IMSS................."<<imss<<endl;
+		
+		 // Verificar en qué banda salarial se encuentra el sueldo ingresado
+		if (sueldo >= 31652 && sueldo <= 91284) {
+        cout << "\n\t\t      Usted esta en la seccion 9 (nivel jefe de oficina)." << endl;
+    	} else if (sueldo >= 22789 && sueldo <= 78244) {
+        cout << "\n\t\t      Usted esta en la seccion 8 (nivel jefe de oficina)." << endl;
+    	} else if (sueldo >= 17725 && sueldo <= 65203) {
+        cout << "\n\t\t      Usted esta en la seccion 7 (nivel jefe de oficina)." << endl;
+    	} else if (sueldo >= 13927 && sueldo <= 52161) {
+        cout << "\n\t\t    Usted esta en la seccion 6 (nivel analista)." << endl;
+    	} else if (sueldo >= 11902 && sueldo <= 30123) {
+        cout << "\n\t\t    Usted esta en la seccion 5 (nivel operativo)." << endl;
+    	} else if (sueldo >= 8862 && sueldo <= 20866) {
+        cout << "\n\t\t    Usted esta en la seccion 4 (nivel operativo)." << endl;
+    	} else if (sueldo >= 6710 && sueldo <= 15649) {
+        cout << "\n\t\t    Usted esta en la seccion 3 (nivel operativo)." << endl;
+    	} else if (sueldo >= 5571 && sueldo <= 10693) {
+        cout << "\n\t\t    Usted esta en la seccion 2 (nivel operativo)." << endl;
+    	} else if (sueldo >= 5063 && sueldo <= 8607) {
+        cout << "\n\t\t    Usted esta en la seccion 1 (nivel operativo)." << endl;
+    	} else {
+    	cout << "\n\tSu sueldo no corresponde a ninguna de las secciones especificadas." << endl;
+    	}
+	
+	    cout<<"\n\t\t\tRetencion IMSS................."<<imss<<endl;
 		cout<<"\t\t\tRetencion ISR.................."<<isr<<endl;
 		cout<<"\t\t\tRetencion SUELDO NETO........."<<neto<<endl;
-
 		//mesnaje de salida o despedida para el usuario
 		cout<<"\n\t\t\tGRACIAS POR UTILIZAR ESTE PROGRAMA"<<"\n\n"<<"\tThis program was developed by the developer Jhonatan Espinal Garcia"<<"\n\n\t\t"<<"all rights of use and distribution are reserved\n\n\n\n";
 	
